@@ -1,1 +1,6 @@
 
+def f(lista):
+    assert all(isinstance(y,str) for y in lista)
+    return {lista.index(y):y[::-1] for y in lista}
+
+print(f(["Stol", "Stolica", "Krevet", "Fotelja"]))
