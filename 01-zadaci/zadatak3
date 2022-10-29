@@ -1,0 +1,6 @@
+def f2(lista):
+    assert (isinstance(lista, list)) and all(isinstance(y,dict) for y in lista)
+    return {(v['kategorija'] for v in lista):(v1['ocjena'] for v1 in lista)}
+                            
+print(f2([{"naziv":"Burek","kategorija":"pite","ocjena":1}, {"naziv":"Ramsteak","kategorija":"steak","ocjena":9}, {"naziv":"Ribeye","kategorija":"steak","ocjena":4}, {"naziv":"Sirnica","kategorija":"pite","ocjena":5}]))                   
+    
