@@ -1,0 +1,5 @@
+def f1(dicta1, dicta2):
+    assert (isinstance(dicta1, dict)) and (isinstance(dicta2, dict)) and all(isinstance(y, list) for y in dicta1) and all(isinstance(y, list) for y in dicta2)
+    return []
+
+print(f1({"valute":["GBP", "USD", "CZK", "Error"], "cijena":[8.5,7.7,0.3,10.3]}, {"valute":["EUR", "USD", "CZK", "Error"], "cijena":[7.5,7.7,0.3,5.5]}))
